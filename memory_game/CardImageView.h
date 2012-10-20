@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CardImageView.h
 //  memory_game
 //
 //  Created by Alex Hsieh on 10/18/12.
@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CardImageView : UIImageView
+
+// @property(nonatomic, assign) IBOutlet id delegate;
+
+-(void)flipCard;
+
+
 
 @end
