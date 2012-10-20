@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardImageView.h"
 
 @class CardImageView;
 
@@ -26,6 +27,8 @@
     IBOutlet CardImageView* card12;
     
     IBOutlet UILabel*       gameTimeLabel;
+    IBOutlet UILabel*       gameScoreLabel;
+    IBOutlet UILabel*       gameMissesLabel;
     
     int                     gametime;
 }

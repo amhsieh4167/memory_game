@@ -13,6 +13,9 @@
 // @property(nonatomic, assign) IBOutlet id delegate;
 
 -(void)flipCard;
+-(int) score;
+-(int) misses;
+-(void) resetScores;
 
 
 

@@ -11,7 +11,7 @@
 
 @implementation CardImageView
 
-static int numberOfTouches, numberOfMatches;
+static int numberOfTouches, score, misses;
 static CardImageView *lastImage;
 
 - (id)initWithCoder:(NSCoder *)coder
@@ -27,8 +27,8 @@ static CardImageView *lastImage;
     // [(GameViewController*)self.delegate]; //delegate codes by TJ
     
     numberOfTouches++;
-    [self setHighlighted:true];
-    [self setUserInteractionEnabled:false];
+    [self setHighlighted:YES];
+    [self setUserInteractionEnabled:NO];
     
     switch (numberOfTouches)
     {
@@ -41,14 +41,11 @@ static CardImageView *lastImage;
         numberOfTouches = 0;
         
         if (lastImage.tag == self.tag) {
-            numberOfMatches++;
-            
-            NSLog(@"number of touches is %i", numberOfTouches);
+            score++;
             NSLog(@"they match");
         }
         else
         {
-            NSLog(@"number of touches is %i", numberOfTouches);
             NSLog(@"they don't match");
             [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
@@ -60,6 +57,16 @@ static CardImageView *lastImage;
     }
 }
 
+-(int) score
+{
+    return score;
+}
+
+-(int) misses
+{
+    return misses;
+}
+
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self flipCard];
@@ -67,10 +74,17 @@ static CardImageView *lastImage;
 
 -(void)resetTwoCards
 {
+    misses++;
     [self setHighlighted: false];
     [self setUserInteractionEnabled:true];
     [lastImage setHighlighted:false];
     [lastImage setUserInteractionEnabled:true];
+}
+
+-(void)resetScores
+{
+    misses = 0;
+    score = 0;
 }
 
 /*
