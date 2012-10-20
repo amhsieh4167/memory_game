@@ -79,7 +79,7 @@
     [card12 setHighlighted:NO];
     [card12 setUserInteractionEnabled:YES];
     
-    [card01 resetScores];
+    [card01 resetScores]; // this works because scores, misses are Class variables... not pretty, but works
     gametime = 0;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
     gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
