@@ -20,8 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    gametime = 0;
-//    [self startGameTimer];
+    [self startGame];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,14 +30,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(NSTimer *) startGameTimer
-
-/*
--(void)displayTime:(NSTimer *)timer
+-(void)gameTimer:(NSTimer *)timer
 {
     gametime++;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
+}
 
-}*/
+-(void)startGame
+{
+    gametime = 0;
+    gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(gameTimer:)
+                                   userInfo:nil
+                                    repeats:YES];
+}
 
 @end

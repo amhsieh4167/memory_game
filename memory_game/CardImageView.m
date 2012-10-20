@@ -25,6 +25,7 @@ static CardImageView *lastImage;
 -(void)flipCard
 {
     // [(GameViewController*)self.delegate]; //delegate codes by TJ
+    
     numberOfTouches++;
     [self setHighlighted:true];
     [self setUserInteractionEnabled:false];

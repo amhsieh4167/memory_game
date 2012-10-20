@@ -27,7 +27,7 @@
     
     IBOutlet UILabel*       gameTimeLabel;
     
-    int gametime;
+    int                     gametime;
 }
 
 // @property CardImageView* lastCardTouched;     this is a code by TJ;
