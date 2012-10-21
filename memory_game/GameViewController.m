@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "PauseViewController.h"
 //#import "CardImageView.h"
 
 
@@ -17,13 +18,14 @@
 
 @implementation GameViewController
 
-
-//@synthesize lastCardTouched = _lastCardTouched;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startGame];
+    gametime = 0;
+    gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
+    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
+    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -33,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)gameTimer:(NSTimer *)timer
+-(void)gameTimer
 {
     if([card01 score] < 6)
     {
@@ -44,15 +46,48 @@
     }
     else {
         gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
-        [NSTimer scheduledTimerWithTimeInterval:1
-                                         target:self
-                                       selector:@selector(resetGame)
-                                       userInfo:nil
-                                        repeats:NO];
+        [NSTGameTimer invalidate];
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Win"
+                                                            message:@"Play again?"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"No, I need a nap"
+                                                  otherButtonTitles:@"Sure, I have no life.", nil];
+        [alertView show];
+        [alertView release];
     }
 }
 
--(void)resetGame
+-(IBAction)pauseGameButton:(id)sender
+{
+    [self pauseGame];
+}
+
+-(void)resumeGame
+{
+    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                    target:self
+                                  selector:@selector(gameTimer)
+                                  userInfo:nil
+                                   repeats:YES];
+}
+
+-(void)pauseGame
+{
+    [NSTGameTimer invalidate];
+    PauseViewController* pauseViewController = [[PauseViewController alloc] initWithNibName:@"PauseViewController" bundle:nil];
+    pauseViewController.view.alpha = 0.0f;
+    [self.view addSubview:pauseViewController.view];
+    
+    [UIView animateWithDuration:0.05f
+                     animations:^{
+                         pauseViewController.view.alpha = 1.0f;
+                     }
+                     completion:^(BOOL finished) {
+
+                     }];
+}
+
+-(void)startGame;
 {
     [card01 setHighlighted:NO];
     [card01 setUserInteractionEnabled:YES];
@@ -84,20 +119,29 @@
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
     gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
     gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
-}
-
--(void)startGame
-{
-    gametime = 0;
-    gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
-    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
-
-    [NSTimer scheduledTimerWithTimeInterval:1
+    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1
                                      target:self
-                                   selector:@selector(gameTimer:)
+                                   selector:@selector(gameTimer)
                                    userInfo:nil
                                     repeats:YES];
 }
+
+
+#pragma mark UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self.view removeFromSuperview];
+            break;
+        case 1:
+            [self startGame];
+            break;
+        default:
+            break;
+    }
+}
+
 
 @end

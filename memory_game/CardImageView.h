@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Alex Hsieh. All rights reserved.
 //
 
+#import <AudioToolbox/AudioServices.h>
 #import <UIKit/UIKit.h>
 
 @interface CardImageView : UIImageView
@@ -16,7 +17,5 @@
 -(int) score;
 -(int) misses;
 -(void) resetScores;
-
-
 
 @end

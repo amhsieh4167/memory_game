@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "memory_game/GameViewController.m"
-         timestampString = "372398857.428439"
+         timestampString = "372485239.263481"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
-         landmarkName = "-gameTimer:"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "-gameTimer"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

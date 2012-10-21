@@ -7,7 +7,6 @@
 //
 
 #import "CardImageView.h"
-#import "GameViewController.h"
 
 @implementation CardImageView
 
@@ -47,6 +46,7 @@ static CardImageView *lastImage;
         else
         {
             NSLog(@"they don't match");
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             [NSTimer scheduledTimerWithTimeInterval:1.0
                                              target:self
                                            selector:@selector(resetTwoCards)

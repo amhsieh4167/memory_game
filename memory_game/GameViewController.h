@@ -11,7 +11,7 @@
 
 @class CardImageView;
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <UIAlertViewDelegate>
 {
     IBOutlet CardImageView* card01;
     IBOutlet CardImageView* card02;
@@ -30,8 +30,18 @@
     IBOutlet UILabel*       gameScoreLabel;
     IBOutlet UILabel*       gameMissesLabel;
     
+    IBOutlet UIButton*      pauseGame;
+    
     int                     gametime;
+    NSTimer*                NSTGameTimer;
+    int                     buttonClicks;
 }
+
+
+-(IBAction)pauseGameButton:(id)sender;
+-(void) startGame;
+-(void) resumeGame;
+
 
 // @property CardImageView* lastCardTouched;     this is a code by TJ;
 
