@@ -12,7 +12,7 @@
 @interface IntroViewController : UIViewController
 {
     IBOutlet UIButton* buttonStartGame;
-    IBOutlet UIImage* gameScreen;
+    IBOutlet UILabel*  touchToPlayLabel;
 }
 
 -(IBAction)startGame:(id)sender;

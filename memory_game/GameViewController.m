@@ -74,7 +74,7 @@
     else {
         gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
         [NSTGameTimer invalidate];
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Win"
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"You've Won!"
                                                             message:@"Play again?"
                                                            delegate:self
                                                   cancelButtonTitle:@"No, I need a nap"
@@ -114,7 +114,7 @@
     pauseViewController.view.alpha = 0.0f;
     [self.view addSubview:pauseViewController.view];
     
-    [UIView animateWithDuration:0.05f
+    [UIView animateWithDuration:1.0f
                      animations:^{
                          pauseViewController.view.alpha = 1.0f;
                      }

@@ -26,6 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [UIView animateWithDuration:10.0f
+                     animations:^{
+                         touchToPlayLabel.alpha = 1.0f;
+                     }
+                     completion:^(BOOL finished) {
+                       //  touchToPlayLabel.text = @"hello";
+                     }];
 	// Do any additional setup after loading the view.
 }
 

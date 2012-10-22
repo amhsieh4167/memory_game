@@ -7,6 +7,7 @@
 //
 
 #import "CardImageView.h"
+#import "PauseViewController.h"
 
 @implementation CardImageView
 
@@ -46,7 +47,7 @@ static CardImageView *lastImage;
         
         if (lastImage.tag == self.tag) {
             score++;
-            NSLog(@"they match");
+            NSLog(@"they match");                                 
         }
         else
         {
