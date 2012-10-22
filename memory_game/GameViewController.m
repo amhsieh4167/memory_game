@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "PauseViewController.h"
+//#import <QuartzCore/QuartzCore.h>
 //#import "CardImageView.h"
 
 
@@ -15,17 +16,43 @@
 
 @end
 
-
 @implementation GameViewController
+
+@synthesize a = _a; // so when a getter or setter method called via self.a we are accessing the _a instance variable
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    carda1.highlightedImage = [UIImage imageNamed:@"Jordan.jpg"];
+    carda1.tag = 0;
+    carda2.highlightedImage = [UIImage imageNamed:@"Jordan.jpg"];
+    carda2.tag = 0;
+    cardb1.highlightedImage = [UIImage imageNamed:@"Jackson.jpg"];
+    cardb1.tag = 1;
+    cardb2.highlightedImage = [UIImage imageNamed:@"Jackson.jpg"];
+    cardb2.tag = 1;
+    cardc1.highlightedImage = [UIImage imageNamed:@"Kukoc.jpg"];
+    cardc1.tag = 2;
+    cardc2.highlightedImage = [UIImage imageNamed:@"Kukoc.jpg"];
+    cardc2.tag = 2;
+    cardd1.highlightedImage = [UIImage imageNamed:@"Kerr.jpg"];
+    cardd1.tag = 3;
+    cardd2.highlightedImage = [UIImage imageNamed:@"Kerr.jpg"];
+    cardd2.tag = 3;
+    carde1.highlightedImage = [UIImage imageNamed:@"Rodman.jpg"];
+    carde1.tag = 4;
+    carde2.highlightedImage = [UIImage imageNamed:@"Rodman.jpg"];
+    carde2.tag = 4;
+    cardf1.highlightedImage = [UIImage imageNamed:@"Pippen.jpg"];
+    cardf1.tag = 5;
+    cardf2.highlightedImage = [UIImage imageNamed:@"Pippen.jpg"];
+    cardf2.tag = 5;
     gametime = 0;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
-    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
-    
+    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
+    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -37,15 +64,15 @@
 
 -(void)gameTimer
 {
-    if([card01 score] < 6)
+    if([aReferenceCard score] < 6)
     {
         gametime++;
         gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
-        gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
+        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
+        gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
     }
     else {
-        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
+        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
         [NSTGameTimer invalidate];
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Win"
                                                             message:@"Play again?"
@@ -57,9 +84,18 @@
     }
 }
 
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    //[self flipCard];
+    NSLog(@"GameView touched");
+}
+
+
 -(IBAction)pauseGameButton:(id)sender
 {
     [self pauseGame];
+   // self.view.layer
+    //(CALayer *)
 }
 
 -(void)resumeGame
@@ -89,43 +125,42 @@
 
 -(void)startGame;
 {
-    [card01 setHighlighted:NO];
-    [card01 setUserInteractionEnabled:YES];
-    [card02 setHighlighted:NO];
-    [card02 setUserInteractionEnabled:YES];
-    [card03 setHighlighted:NO];
-    [card03 setUserInteractionEnabled:YES];
-    [card04 setHighlighted:NO];
-    [card04 setUserInteractionEnabled:YES];
-    [card05 setHighlighted:NO];
-    [card05 setUserInteractionEnabled:YES];
-    [card06 setHighlighted:NO];
-    [card06 setUserInteractionEnabled:YES];
-    [card07 setHighlighted:NO];
-    [card07 setUserInteractionEnabled:YES];
-    [card08 setHighlighted:NO];
-    [card08 setUserInteractionEnabled:YES];
-    [card09 setHighlighted:NO];
-    [card09 setUserInteractionEnabled:YES];
-    [card10 setHighlighted:NO];
-    [card10 setUserInteractionEnabled:YES];
-    [card11 setHighlighted:NO];
-    [card11 setUserInteractionEnabled:YES];
-    [card12 setHighlighted:NO];
-    [card12 setUserInteractionEnabled:YES];
+    [carda1 setHighlighted:NO];
+    [carda1 setUserInteractionEnabled:YES];
+    [carda2 setHighlighted:NO];
+    [carda2 setUserInteractionEnabled:YES];
+    [cardb1 setHighlighted:NO];
+    [cardb1 setUserInteractionEnabled:YES];
+    [cardb2 setHighlighted:NO];
+    [cardb2 setUserInteractionEnabled:YES];
+    [cardc1 setHighlighted:NO];
+    [cardc1 setUserInteractionEnabled:YES];
+    [cardc2 setHighlighted:NO];
+    [cardc2 setUserInteractionEnabled:YES];
+    [cardd1 setHighlighted:NO];
+    [cardd1 setUserInteractionEnabled:YES];
+    [cardd2 setHighlighted:NO];
+    [cardd2 setUserInteractionEnabled:YES];
+    [carde1 setHighlighted:NO];
+    [carde1 setUserInteractionEnabled:YES];
+    [carde2 setHighlighted:NO];
+    [carde2 setUserInteractionEnabled:YES];
+    [cardf1 setHighlighted:NO];
+    [cardf1 setUserInteractionEnabled:YES];
+    [cardf2 setHighlighted:NO];
+    [cardf2 setUserInteractionEnabled:YES];
     
-    [card01 resetScores]; // this works because scores, misses are Class variables... not pretty, but works
+    [aReferenceCard resetScores]; // this works because scores, misses are Class variables... not pretty, but works
     gametime = 0;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [card01 score]];
-    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [card01 misses]];
-    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1
+    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
+    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
+    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                      target:self
                                    selector:@selector(gameTimer)
                                    userInfo:nil
                                     repeats:YES];
 }
-
 
 #pragma mark UIAlertViewDelegate
 
@@ -142,6 +177,5 @@
             break;
     }
 }
-
 
 @end

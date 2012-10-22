@@ -13,30 +13,35 @@
 
 @interface GameViewController : UIViewController <UIAlertViewDelegate>
 {
-    IBOutlet CardImageView* card01;
-    IBOutlet CardImageView* card02;
-    IBOutlet CardImageView* card03;
-    IBOutlet CardImageView* card04;
-    IBOutlet CardImageView* card05;
-    IBOutlet CardImageView* card06;
-    IBOutlet CardImageView* card07;
-    IBOutlet CardImageView* card08;
-    IBOutlet CardImageView* card09;
-    IBOutlet CardImageView* card10;
-    IBOutlet CardImageView* card11;
-    IBOutlet CardImageView* card12;
+    IBOutlet CardImageView* carda1;
+    IBOutlet CardImageView* carda2;
+    IBOutlet CardImageView* cardb1;
+    IBOutlet CardImageView* cardb2;
+    IBOutlet CardImageView* cardc1;
+    IBOutlet CardImageView* cardc2;
+    IBOutlet CardImageView* cardd1;
+    IBOutlet CardImageView* cardd2;
+    IBOutlet CardImageView* carde1;
+    IBOutlet CardImageView* carde2;
+    IBOutlet CardImageView* cardf1;
+    IBOutlet CardImageView* cardf2;
+    IBOutlet CardImageView* aReferenceCard;
     
     IBOutlet UILabel*       gameTimeLabel;
     IBOutlet UILabel*       gameScoreLabel;
     IBOutlet UILabel*       gameMissesLabel;
-    
     IBOutlet UIButton*      pauseGame;
     
-    int                     gametime;
     NSTimer*                NSTGameTimer;
+    
+    int                     gametime;
     int                     buttonClicks;
+
 }
 
+@property int abc;
+
+@property int a;
 
 -(IBAction)pauseGameButton:(id)sender;
 -(void) startGame;

@@ -12,6 +12,15 @@
 		FA842FEB1633559700321D05 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA842FEA1633559700321D05 /* IntroViewController.xib */; };
 		FA842FF216338AA000321D05 /* PauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA842FF116338AA000321D05 /* PauseViewController.m */; };
 		FA842FF416338BF200321D05 /* PauseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA842FF316338BF200321D05 /* PauseViewController.xib */; };
+		FA8430071634A3C200321D05 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8430061634A3C200321D05 /* pause.png */; };
+		FA8430091634A6BD00321D05 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8430081634A6BD00321D05 /* QuartzCore.framework */; };
+		FA84302C1634AE4400321D05 /* Jackson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8430261634AE4400321D05 /* Jackson.jpg */; };
+		FA84302D1634AE4400321D05 /* Kukoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8430271634AE4400321D05 /* Kukoc.jpg */; };
+		FA84302E1634AE4400321D05 /* Kerr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8430281634AE4400321D05 /* Kerr.jpg */; };
+		FA84302F1634AE4400321D05 /* Rodman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8430291634AE4400321D05 /* Rodman.jpg */; };
+		FA8430301634AE4400321D05 /* Pippen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA84302A1634AE4400321D05 /* Pippen.jpg */; };
+		FA8430321634B00500321D05 /* bulls_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA8430311634B00500321D05 /* bulls_profile.jpg */; };
+		FA8430361634B1FA00321D05 /* bulls_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA8430351634B1FA00321D05 /* bulls_logo.png */; };
 		FA9368731630BCF5006C2722 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9368721630BCF5006C2722 /* UIKit.framework */; };
 		FA9368751630BCF5006C2722 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9368741630BCF5006C2722 /* Foundation.framework */; };
 		FA9368771630BCF5006C2722 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9368761630BCF5006C2722 /* CoreGraphics.framework */; };
@@ -24,7 +33,6 @@
 		FA93688C1630BCF5006C2722 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA93688B1630BCF5006C2722 /* GameViewController.m */; };
 		FA93688F1630BCF5006C2722 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93688D1630BCF5006C2722 /* GameViewController.xib */; };
 		FA9368971630E5FA006C2722 /* CardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9368961630E5FA006C2722 /* CardImageView.m */; };
-		FA9368991630EBFE006C2722 /* Chicago_Bulls_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9368981630EBFE006C2722 /* Chicago_Bulls_logo.png */; };
 		FA93689C16310971006C2722 /* Jordan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA93689B16310971006C2722 /* Jordan.jpg */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +44,15 @@
 		FA842FF016338AA000321D05 /* PauseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseViewController.h; sourceTree = "<group>"; };
 		FA842FF116338AA000321D05 /* PauseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseViewController.m; sourceTree = "<group>"; };
 		FA842FF316338BF200321D05 /* PauseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PauseViewController.xib; sourceTree = "<group>"; };
+		FA8430061634A3C200321D05 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = Images/pause.png; sourceTree = "<group>"; };
+		FA8430081634A6BD00321D05 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA8430261634AE4400321D05 /* Jackson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jackson.jpg; path = Images/Jackson.jpg; sourceTree = "<group>"; };
+		FA8430271634AE4400321D05 /* Kukoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Kukoc.jpg; path = Images/Kukoc.jpg; sourceTree = "<group>"; };
+		FA8430281634AE4400321D05 /* Kerr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Kerr.jpg; path = Images/Kerr.jpg; sourceTree = "<group>"; };
+		FA8430291634AE4400321D05 /* Rodman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Rodman.jpg; path = Images/Rodman.jpg; sourceTree = "<group>"; };
+		FA84302A1634AE4400321D05 /* Pippen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Pippen.jpg; path = Images/Pippen.jpg; sourceTree = "<group>"; };
+		FA8430311634B00500321D05 /* bulls_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bulls_profile.jpg; path = Images/bulls_profile.jpg; sourceTree = "<group>"; };
+		FA8430351634B1FA00321D05 /* bulls_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bulls_logo.png; path = Images/bulls_logo.png; sourceTree = "<group>"; };
 		FA93686E1630BCF5006C2722 /* memory_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memory_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9368721630BCF5006C2722 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA9368741630BCF5006C2722 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,7 +71,6 @@
 		FA93688E1630BCF5006C2722 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController.xib; sourceTree = "<group>"; };
 		FA9368951630E5FA006C2722 /* CardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageView.h; sourceTree = "<group>"; };
 		FA9368961630E5FA006C2722 /* CardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageView.m; sourceTree = "<group>"; };
-		FA9368981630EBFE006C2722 /* Chicago_Bulls_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chicago_Bulls_logo.png; path = Images/Chicago_Bulls_logo.png; sourceTree = "<group>"; };
 		FA93689B16310971006C2722 /* Jordan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jordan.jpg; path = Images/Jordan.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8430091634A6BD00321D05 /* QuartzCore.framework in Frameworks */,
 				FA842FCD16333AD900321D05 /* AudioToolbox.framework in Frameworks */,
 				FA9368731630BCF5006C2722 /* UIKit.framework in Frameworks */,
 				FA9368751630BCF5006C2722 /* Foundation.framework in Frameworks */,
@@ -76,7 +93,6 @@
 		FA9368631630BCF5006C2722 = {
 			isa = PBXGroup;
 			children = (
-				FA842FCC16333AD900321D05 /* AudioToolbox.framework */,
 				FA9368781630BCF5006C2722 /* memory_game */,
 				FA93689A1630EC0F006C2722 /* Images */,
 				FA9368711630BCF5006C2722 /* Frameworks */,
@@ -95,6 +111,8 @@
 		FA9368711630BCF5006C2722 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA8430081634A6BD00321D05 /* QuartzCore.framework */,
+				FA842FCC16333AD900321D05 /* AudioToolbox.framework */,
 				FA9368721630BCF5006C2722 /* UIKit.framework */,
 				FA9368741630BCF5006C2722 /* Foundation.framework */,
 				FA9368761630BCF5006C2722 /* CoreGraphics.framework */,
@@ -140,8 +158,15 @@
 		FA93689A1630EC0F006C2722 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA8430351634B1FA00321D05 /* bulls_logo.png */,
+				FA8430311634B00500321D05 /* bulls_profile.jpg */,
+				FA8430261634AE4400321D05 /* Jackson.jpg */,
+				FA8430271634AE4400321D05 /* Kukoc.jpg */,
+				FA8430281634AE4400321D05 /* Kerr.jpg */,
+				FA8430291634AE4400321D05 /* Rodman.jpg */,
+				FA84302A1634AE4400321D05 /* Pippen.jpg */,
+				FA8430061634A3C200321D05 /* pause.png */,
 				FA93689B16310971006C2722 /* Jordan.jpg */,
-				FA9368981630EBFE006C2722 /* Chicago_Bulls_logo.png */,
 			);
 			name = Images;
 			path = memory_game;
@@ -203,10 +228,17 @@
 				FA9368871630BCF5006C2722 /* Default@2x.png in Resources */,
 				FA9368891630BCF5006C2722 /* Default-568h@2x.png in Resources */,
 				FA93688F1630BCF5006C2722 /* GameViewController.xib in Resources */,
-				FA9368991630EBFE006C2722 /* Chicago_Bulls_logo.png in Resources */,
 				FA93689C16310971006C2722 /* Jordan.jpg in Resources */,
 				FA842FEB1633559700321D05 /* IntroViewController.xib in Resources */,
 				FA842FF416338BF200321D05 /* PauseViewController.xib in Resources */,
+				FA8430071634A3C200321D05 /* pause.png in Resources */,
+				FA84302C1634AE4400321D05 /* Jackson.jpg in Resources */,
+				FA84302D1634AE4400321D05 /* Kukoc.jpg in Resources */,
+				FA84302E1634AE4400321D05 /* Kerr.jpg in Resources */,
+				FA84302F1634AE4400321D05 /* Rodman.jpg in Resources */,
+				FA8430301634AE4400321D05 /* Pippen.jpg in Resources */,
+				FA8430321634B00500321D05 /* bulls_profile.jpg in Resources */,
+				FA8430361634B1FA00321D05 /* bulls_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

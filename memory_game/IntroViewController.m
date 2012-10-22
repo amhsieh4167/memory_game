@@ -35,8 +35,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+    NSLog(@"IntroView is being touched");
+/*
+    GameViewController* gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    gameViewController.view.alpha = 0.0f;
+    [self.view addSubview:gameViewController.view];
+    
+    [UIView animateWithDuration:2.0
+                     animations:^{
+                         gameViewController.view.alpha = 1.0f;
+                     }
+                     completion:^(BOOL finished) {
+                         [gameViewController startGame];
+                     }];
+  */
+}
+
 -(IBAction)startGame:(id)sender
 {
+        NSLog(@"IntroView touched");
     GameViewController* gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     gameViewController.view.alpha = 0.0f;
     [self.view addSubview:gameViewController.view];

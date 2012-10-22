@@ -21,6 +21,11 @@ static CardImageView *lastImage;
     return self;
 }
 
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self flipCard];
+}
+
 -(void)flipCard
 {
     // [(GameViewController*)self.delegate]; //delegate codes by TJ
@@ -47,7 +52,7 @@ static CardImageView *lastImage;
         {
             NSLog(@"they don't match");
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-            [NSTimer scheduledTimerWithTimeInterval:1.0
+            [NSTimer scheduledTimerWithTimeInterval:0.5f //this delay allows the player to select the third card before the cards reset
                                              target:self
                                            selector:@selector(resetTwoCards)
                                            userInfo:nil
@@ -55,21 +60,6 @@ static CardImageView *lastImage;
         }
         break;
     }
-}
-
--(int) score
-{
-    return score;
-}
-
--(int) misses
-{
-    return misses;
-}
-
--(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self flipCard];
 }
 
 -(void)resetTwoCards
@@ -85,6 +75,16 @@ static CardImageView *lastImage;
 {
     misses = 0;
     score = 0;
+}
+
+-(int) score
+{
+    return score;
+}
+
+-(int) misses
+{
+    return misses;
 }
 
 /*
