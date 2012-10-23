@@ -42,6 +42,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{139, 436}, {27, 24}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="404163337"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -75,6 +76,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{23, 58}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="681132079"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -93,6 +95,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{22, 144}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="452812134"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -105,6 +108,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{116, 145}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="382935510"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -117,6 +121,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{22, 239}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="261848821"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -129,6 +134,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{22, 328}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="626361309"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -141,6 +147,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{116, 240}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="90881434"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -153,6 +160,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{116, 329}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="49793448"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -165,6 +173,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{212, 328}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="354408427"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -177,6 +186,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{212, 239}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="362193128"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -189,6 +199,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{212, 144}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="271704147"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -201,6 +212,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{117, 58}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="143811669"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -213,6 +225,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{210, 57}, {80, 80}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="918077400"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">1</int>
@@ -225,6 +238,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{26, 34}, {86, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="864443277"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -258,6 +272,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{225, 34}, {65, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="688011891"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -279,7 +294,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{174, 436}, {24, 24}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -312,6 +327,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{26, 12}, {86, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="825945901"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -346,6 +362,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{225, 12}, {65, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="466496761"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -365,6 +382,7 @@
 				</array>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="137007563"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
@@ -708,7 +726,121 @@
 			<nil key="sourceID"/>
 			<int key="maxID">107</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">CardImageView</string>
+					<string key="superclassName">UIImageView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/CardImageView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GameViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">pauseGameButton:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">pauseGameButton:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">pauseGameButton:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="carda1">CardImageView</string>
+						<string key="carda2">CardImageView</string>
+						<string key="cardb1">CardImageView</string>
+						<string key="cardb2">CardImageView</string>
+						<string key="cardc1">CardImageView</string>
+						<string key="cardc2">CardImageView</string>
+						<string key="cardd1">CardImageView</string>
+						<string key="cardd2">CardImageView</string>
+						<string key="carde1">CardImageView</string>
+						<string key="carde2">CardImageView</string>
+						<string key="cardf1">CardImageView</string>
+						<string key="cardf2">CardImageView</string>
+						<string key="gameMissesLabel">UILabel</string>
+						<string key="gameScoreLabel">UILabel</string>
+						<string key="gameTimeLabel">UILabel</string>
+						<string key="pauseGame">UIButton</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="carda1">
+							<string key="name">carda1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="carda2">
+							<string key="name">carda2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardb1">
+							<string key="name">cardb1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardb2">
+							<string key="name">cardb2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardc1">
+							<string key="name">cardc1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardc2">
+							<string key="name">cardc2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardd1">
+							<string key="name">cardd1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardd2">
+							<string key="name">cardd2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="carde1">
+							<string key="name">carde1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="carde2">
+							<string key="name">carde2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardf1">
+							<string key="name">cardf1</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="cardf2">
+							<string key="name">cardf2</string>
+							<string key="candidateClassName">CardImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gameMissesLabel">
+							<string key="name">gameMissesLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gameScoreLabel">
+							<string key="name">gameScoreLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="gameTimeLabel">
+							<string key="name">gameTimeLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pauseGame">
+							<string key="name">pauseGame</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GameViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

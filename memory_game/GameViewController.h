@@ -14,18 +14,19 @@
 
 @interface GameViewController : UIViewController <UIAlertViewDelegate, ResumeGameDelegate>
 {
-    IBOutlet CardImageView* carda1;
-    IBOutlet CardImageView* carda2;
-    IBOutlet CardImageView* cardb1;
-    IBOutlet CardImageView* cardb2;
-    IBOutlet CardImageView* cardc1;
-    IBOutlet CardImageView* cardc2;
-    IBOutlet CardImageView* cardd1;
-    IBOutlet CardImageView* cardd2;
-    IBOutlet CardImageView* carde1;
-    IBOutlet CardImageView* carde2;
-    IBOutlet CardImageView* cardf1;
-    IBOutlet CardImageView* cardf2;
+    
+    CardImageView* carda1;
+    CardImageView* carda2;
+    CardImageView* cardb1;
+    CardImageView* cardb2;
+    CardImageView* cardc1;
+    CardImageView* cardc2;
+    CardImageView* cardd1;
+    CardImageView* cardd2;
+    CardImageView* carde1;
+    CardImageView* carde2;
+    CardImageView* cardf1;
+    CardImageView* cardf2;
     
     IBOutlet UILabel*       gameTimeLabel;
     IBOutlet UILabel*       gameScoreLabel;
