@@ -9,10 +9,10 @@
 #import "CardImageView.h"
 #import "PauseViewController.h"
 
-@implementation CardImageView
-
 static int numberOfTouches, score, misses;
 static CardImageView *lastImage;
+
+@implementation CardImageView
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -72,18 +72,18 @@ static CardImageView *lastImage;
     [lastImage setUserInteractionEnabled:true];
 }
 
--(void)resetScores
++(void)resetScores
 {
     misses = 0;
     score = 0;
 }
 
--(int) score
++(int) score
 {
     return score;
 }
 
--(int) misses
++(int) misses
 {
     return misses;
 }

@@ -72,6 +72,7 @@
 		FA9368951630E5FA006C2722 /* CardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageView.h; sourceTree = "<group>"; };
 		FA9368961630E5FA006C2722 /* CardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageView.m; sourceTree = "<group>"; };
 		FA93689B16310971006C2722 /* Jordan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jordan.jpg; path = Images/Jordan.jpg; sourceTree = "<group>"; };
+		FA9895F4163645C200CAC3E0 /* ResumeGameDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResumeGameDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 				FA93688D1630BCF5006C2722 /* GameViewController.xib */,
 				FA9368951630E5FA006C2722 /* CardImageView.h */,
 				FA9368961630E5FA006C2722 /* CardImageView.m */,
+				FA9895F4163645C200CAC3E0 /* ResumeGameDelegate.h */,
 				FA9368791630BCF5006C2722 /* Supporting Files */,
 			);
 			path = memory_game;

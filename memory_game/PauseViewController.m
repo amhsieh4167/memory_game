@@ -7,13 +7,14 @@
 //
 
 #import "PauseViewController.h"
-#import "GameViewController.h"
 
 @interface PauseViewController ()
 
 @end
 
 @implementation PauseViewController
+
+@synthesize delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +40,7 @@
 -(IBAction)resumeGame:(id)sender
 {
     [self.view removeFromSuperview];
-    
+    [_delegate resumeGame];
 }
 
 @end

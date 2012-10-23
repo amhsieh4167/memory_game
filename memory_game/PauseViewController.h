@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ResumeGameDelegate.h"
 
 @interface PauseViewController : UIViewController
 {
-    IBOutlet UIButton* buttonResumeGame;
+
 }
 
+@property(nonatomic, retain)id<ResumeGameDelegate>delegate;
 -(IBAction)resumeGame:(id)sender;
 
 @end

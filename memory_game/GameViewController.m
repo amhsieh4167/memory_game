@@ -50,8 +50,8 @@
     cardf2.tag = 5;
     gametime = 0;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
-    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
+    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [CardImageView score]];
+    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [CardImageView misses]];
 
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -64,16 +64,16 @@
 
 -(void)gameTimer
 {
-    if([aReferenceCard score] < 6)
+    if([CardImageView score] < 6)
     {
         gametime++;
         gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
-        gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
+        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [CardImageView score]];
+        gameMissesLabel.text = [NSString stringWithFormat:@"%i", [CardImageView misses]];
     }
     else {
-        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
-        [NSTGameTimer invalidate];
+        gameScoreLabel.text = [NSString stringWithFormat:@"%i", [CardImageView score]];
+        [gameTimer invalidate];
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"You've Won!"
                                                             message:@"Play again?"
                                                            delegate:self
@@ -98,21 +98,13 @@
     //(CALayer *)
 }
 
--(void)resumeGame
-{
-    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                    target:self
-                                  selector:@selector(gameTimer)
-                                  userInfo:nil
-                                   repeats:YES];
-}
-
 -(void)pauseGame
 {
-    [NSTGameTimer invalidate];
+    [gameTimer invalidate];
     PauseViewController* pauseViewController = [[PauseViewController alloc] initWithNibName:@"PauseViewController" bundle:nil];
     pauseViewController.view.alpha = 0.0f;
     [self.view addSubview:pauseViewController.view];
+    pauseViewController.delegate = self;
     
     [UIView animateWithDuration:1.0f
                      animations:^{
@@ -150,16 +142,27 @@
     [cardf2 setHighlighted:NO];
     [cardf2 setUserInteractionEnabled:YES];
     
-    [aReferenceCard resetScores]; // this works because scores, misses are Class variables... not pretty, but works
+    [CardImageView resetScores];
     gametime = 0;
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
-    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard score]];
-    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [aReferenceCard misses]];
-    NSTGameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+    gameScoreLabel.text = [NSString stringWithFormat:@"%i", [CardImageView score]];
+    gameMissesLabel.text = [NSString stringWithFormat:@"%i", [CardImageView misses]];
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                      target:self
-                                   selector:@selector(gameTimer)
+                                selector:@selector(gameTimer)
                                    userInfo:nil
                                     repeats:YES];
+}
+
+#pragma mark ResumeGameDelegate
+
+-(void)resumeGame
+{
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                    target:self
+                                                  selector:@selector(gameTimer)
+                                                  userInfo:nil
+                                                   repeats:YES];
 }
 
 #pragma mark UIAlertViewDelegate

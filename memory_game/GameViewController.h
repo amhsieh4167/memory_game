@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CardImageView.h"
+#import "ResumeGameDelegate.h"
 
 @class CardImageView;
 
-@interface GameViewController : UIViewController <UIAlertViewDelegate>
+@interface GameViewController : UIViewController <UIAlertViewDelegate, ResumeGameDelegate>
 {
     IBOutlet CardImageView* carda1;
     IBOutlet CardImageView* carda2;
@@ -25,14 +26,13 @@
     IBOutlet CardImageView* carde2;
     IBOutlet CardImageView* cardf1;
     IBOutlet CardImageView* cardf2;
-    IBOutlet CardImageView* aReferenceCard;
     
     IBOutlet UILabel*       gameTimeLabel;
     IBOutlet UILabel*       gameScoreLabel;
     IBOutlet UILabel*       gameMissesLabel;
     IBOutlet UIButton*      pauseGame;
     
-    NSTimer*                NSTGameTimer;
+    NSTimer*                gameTimer;
     
     int                     gametime;
     int                     buttonClicks;
@@ -45,8 +45,6 @@
 
 -(IBAction)pauseGameButton:(id)sender;
 -(void) startGame;
--(void) resumeGame;
-
 
 // @property CardImageView* lastCardTouched;     this is a code by TJ;
 
