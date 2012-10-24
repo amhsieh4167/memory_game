@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA38A65F1637179C00A08DFE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA38A65D1637179C00A08DFE /* SettingViewController.m */; };
+		FA38A6601637179C00A08DFE /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA38A65E1637179C00A08DFE /* SettingViewController.xib */; };
 		FA842FCD16333AD900321D05 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA842FCC16333AD900321D05 /* AudioToolbox.framework */; };
 		FA842FE9163354C300321D05 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA842FE8163354C300321D05 /* IntroViewController.m */; };
 		FA842FEB1633559700321D05 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA842FEA1633559700321D05 /* IntroViewController.xib */; };
@@ -37,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA38A65C1637179C00A08DFE /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		FA38A65D1637179C00A08DFE /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		FA38A65E1637179C00A08DFE /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		FA842FCC16333AD900321D05 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA842FE7163354C300321D05 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		FA842FE8163354C300321D05 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 				FA93688A1630BCF5006C2722 /* GameViewController.h */,
 				FA93688B1630BCF5006C2722 /* GameViewController.m */,
 				FA93688D1630BCF5006C2722 /* GameViewController.xib */,
+				FA38A65C1637179C00A08DFE /* SettingViewController.h */,
+				FA38A65D1637179C00A08DFE /* SettingViewController.m */,
+				FA38A65E1637179C00A08DFE /* SettingViewController.xib */,
 				FA9368951630E5FA006C2722 /* CardImageView.h */,
 				FA9368961630E5FA006C2722 /* CardImageView.m */,
 				FA9895F4163645C200CAC3E0 /* ResumeGameDelegate.h */,
@@ -241,6 +249,7 @@
 				FA8430301634AE4400321D05 /* Pippen.jpg in Resources */,
 				FA8430321634B00500321D05 /* bulls_profile.jpg in Resources */,
 				FA8430361634B1FA00321D05 /* bulls_logo.png in Resources */,
+				FA38A6601637179C00A08DFE /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 				FA9368971630E5FA006C2722 /* CardImageView.m in Sources */,
 				FA842FE9163354C300321D05 /* IntroViewController.m in Sources */,
 				FA842FF216338AA000321D05 /* PauseViewController.m in Sources */,
+				FA38A65F1637179C00A08DFE /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,10 +343,13 @@
 		FA9368931630BCF5006C2722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memory_game/memory_game-Prefix.pch";
 				INFOPLIST_FILE = "memory_game/memory_game-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -344,10 +357,13 @@
 		FA9368941630BCF5006C2722 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memory_game/memory_game-Prefix.pch";
 				INFOPLIST_FILE = "memory_game/memory_game-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

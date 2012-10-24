@@ -64,7 +64,7 @@
 
 -(IBAction)startGame:(id)sender
 {
-        NSLog(@"IntroView touched");
+    NSLog(@"IntroView touched");
     GameViewController* gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     gameViewController.view.alpha = 0.0f;
     [self.view addSubview:gameViewController.view];

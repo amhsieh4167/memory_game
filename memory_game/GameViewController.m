@@ -6,11 +6,13 @@
 //  Copyright (c) 2012 Alex Hsieh. All rights reserved.
 //
 
+#define kTimerInterval 1.0
+#define kWinningScore 6
 #import "GameViewController.h"
 #import "PauseViewController.h"
+#import "SettingViewController.h"
 //#import <QuartzCore/QuartzCore.h>
 //#import "CardImageView.h"
-
 
 @interface GameViewController ()
 
@@ -64,7 +66,7 @@
 
 -(void)gameTimer
 {
-    if([CardImageView score] < 6)
+    if([CardImageView score] < kWinningScore)
     {
         gametime++;
         gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
@@ -90,28 +92,17 @@
     NSLog(@"GameView touched");
 }
 
-
--(IBAction)pauseGameButton:(id)sender
-{
-    [self pauseGame];
-   // self.view.layer
-    //(CALayer *)
-}
-
 -(void)pauseGame
 {
     [gameTimer invalidate];
     PauseViewController* pauseViewController = [[PauseViewController alloc] initWithNibName:@"PauseViewController" bundle:nil];
-    pauseViewController.view.alpha = 0.0f;
+    pauseViewController.view.alpha = 1.0f;
     [self.view addSubview:pauseViewController.view];
     pauseViewController.delegate = self;
     
     [UIView animateWithDuration:1.0f
                      animations:^{
                          pauseViewController.view.alpha = 1.0f;
-                     }
-                     completion:^(BOOL finished) {
-
                      }];
 }
 
@@ -147,22 +138,46 @@
     gameTimeLabel.text = [NSString stringWithFormat:@"%i", gametime];
     gameScoreLabel.text = [NSString stringWithFormat:@"%i", [CardImageView score]];
     gameMissesLabel.text = [NSString stringWithFormat:@"%i", [CardImageView misses]];
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
-                                     target:self
-                                selector:@selector(gameTimer)
-                                   userInfo:nil
-                                    repeats:YES];
+    [self startTimer];
+}
+
+#pragma mark IBActions
+
+-(IBAction)pauseGameButton:(id)sender
+{
+    [self pauseGame];
+    // self.view.layer
+    //(CALayer *)
+}
+
+-(IBAction)setting:(id)sender
+{
+    [gameTimer invalidate];
+    SettingViewController* settingViewController = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
+    settingViewController.view.alpha = 1.0f;
+    [self.view addSubview:settingViewController.view];
+    NSLog(@"Gameview added settingView");
+    settingViewController.delegate = self;
+    //    [UIView animateWithDuration:5.0f
+    //                     animations:^{
+    //                         settingViewController.view.alpha = 1.0f;
+    //                     }];
+    
 }
 
 #pragma mark ResumeGameDelegate
-
+- (void) startTimer
+{
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:kTimerInterval
+                                                 target:self
+                                               selector:@selector(gameTimer)
+                                               userInfo:nil
+                                                repeats:YES];
+    
+}
 -(void)resumeGame
 {
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                    target:self
-                                                  selector:@selector(gameTimer)
-                                                  userInfo:nil
-                                                   repeats:YES];
+    [self startTimer];
 }
 
 #pragma mark UIAlertViewDelegate

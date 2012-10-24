@@ -65,11 +65,35 @@ static CardImageView *lastImage;
 
 -(void)resetTwoCards
 {
-    misses++;
-    [self setHighlighted: false];
-    [self setUserInteractionEnabled:true];
-    [lastImage setHighlighted:false];
-    [lastImage setUserInteractionEnabled:true];
+//    misses++;
+//    [self setHighlighted: false];
+//    [self setUserInteractionEnabled:true];
+//    [lastImage setHighlighted:false];
+//    [lastImage setUserInteractionEnabled:true];
+    
+    [UIView transitionWithView:self
+                      duration:1.0f
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations: ^{
+                        misses++;
+                        [self setHighlighted: false];
+                        [self setUserInteractionEnabled:true];
+                        [lastImage setHighlighted:false];
+                        [lastImage setUserInteractionEnabled:true];
+                    }
+                    completion:NULL];
+    
+    [UIView transitionWithView:lastImage
+                      duration:1.0f
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations: ^{
+                        misses++;
+                        [self setHighlighted: false];
+                        [self setUserInteractionEnabled:true];
+                        [lastImage setHighlighted:false];
+                        [lastImage setUserInteractionEnabled:true];
+                    }
+                    completion:NULL];
 }
 
 +(void)resetScores
